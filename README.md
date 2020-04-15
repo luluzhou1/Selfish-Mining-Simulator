@@ -20,7 +20,7 @@
 
 Comparing the result of simulation and theoritical result of simulation using ![selfish_mining_simulation.py](selfish_mining_simulation.py)
 
-
+Simulation Result:
 
 ## Markov Decision Process Model
 
