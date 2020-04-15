@@ -69,8 +69,7 @@ Block race winning rate: 𝛾
 Note that the objective function is non-linear. 
 2. To construct a linear function, we use the following function:
 𝜔_𝜌 (𝑥, 𝑦)=(1−𝜌)∙𝑥− 𝜌∙𝑦    
-The objective function is constructed as:     
-<img src="./pictures/obj_fun.png" width = "10%" />
+The objective function is constructed as: <img src="./pictures/obj_fun.png" width = "20%" />
 
 
 #### Covert to Finite MDP
