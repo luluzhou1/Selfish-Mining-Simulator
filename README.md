@@ -54,17 +54,24 @@ Block race winning rate: 𝛾
 #### 5-tumple of MDP
 1. Action space: {Adopt, Override, Match, Wait}
 2. State space: {a, h, fork}
-a: length of private chain, h: length of public chain
-fork: {relevant, irrelevant, active}
-State of the form (a, h, relevant) means that the previous state was of the form (a, h − 1, ·); this implies that if a ≥ h, match is feasible.
- Conversely, (a, h, irrelevant) denotes the case where the previous state was (a − 1, h, ·), rendering match now ineffective, as all honest nodes received already the h’th block. 
-The third label, active, represents the case where the honest network is already split, due to a previous match action; this information affects the transition to the next state, as described below. We will refer to states as (a, h) or (a, h,·), in contexts where the fork label plays no effective role. 
+  - a: length of private chain
+  - h: length of public chain
+  - fork: {relevant, irrelevant, active}
+    - State of the form (a, h, relevant) means that the previous state was of the form (a, h − 1, ·); this implies that if a ≥ h, match is feasible.
+    - Conversely, (a, h, irrelevant) denotes the case where the previous state was (a − 1, h, ·), rendering match now ineffective, as all honest nodes received already the h’th block. 
+    - The third label, active, represents the case where the honest network is already split, due to a previous match action; this information affects the transition to the next state, as described below. We will refer to states as (a, h) or (a, h,·), in contexts where the fork label plays no effective role. 
+
 3. Transtion and reward:
 
 #### Objective function
 
-1. The initial objective function is non-linear because the 
-2. We introduce the parameter 
+1. Maximize relative revenue: 𝑘(𝑥, 𝑦)=𝑥/(𝑥+𝑦)=1/(1+𝑦/𝑥).
+Note that the objective function is non-linear. 
+2. To construct a linear function, we use the following function:
+𝜔_𝜌 (𝑥, 𝑦)=(1−𝜌)∙𝑥− 𝜌∙𝑦    
+The objective function is constructed as:     
+<img src="./pictures/obj_fun.png" width = "10%" />
+
 
 #### Covert to Finite MDP
 
