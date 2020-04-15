@@ -2,10 +2,10 @@
 
 ## inportant terms in blockchain security
 
-- Incentive compatible:
-- Block race:
+- Incentive compatible: the incentives that motivate the actions of individual participants are consistent with following the rules established by the group. If the blockchain system is incentive compatible, the participants could not make profit by deviating from the protocol.
+- Block race: 
 - Profit threshold: minimal 𝛼 for which employing dishonest mining strategies becomes profitable.
-- Block propagation 
+- Block propagation:
 - Block withholding: 
 
 ## Markov Chain Model
