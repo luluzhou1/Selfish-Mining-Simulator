@@ -16,7 +16,7 @@ In this paper, the authors came up with the "selfish mining" attack, which showe
 
 ### 2.1 Selfish Mining Model 1
 
-<img src="./pictures/markov_chain_model.png" width = "80%" />
+<img src="./pictures/markov_chain_model.png" width = "60%" />
 
 ### 2.2 Simulation
 
@@ -24,9 +24,9 @@ Comparing the result of simulation and theoritical result of simulation using ![
 
 Simulation Result:
 
-<img src="./pictures/Model1_result.png" width = "80%" />
+<img src="./pictures/Model1_result.png" width = "60%" />
 
-In this figure, the black line is the return if mining honestly, while the red line is an upper bound for selfish mining (see 3.1). The blue and green line indicates the theoritical revenue of selfish mining model 1, with gamma = 0.2, 0.8. The dots show the simulated average revenue.
+In this figure, the black line is the return if mining honestly, while the red line is an upper bound for selfish mining (see in 3.1). The blue and green line indicates the theoritical revenue of selfish mining model 1, with gamma = 0.2, 0.8. The dots show the simulated average revenue.
 
 ## 3. Markov Decision Process Model
 
@@ -60,6 +60,13 @@ State of the form (a, h, relevant) means that the previous state was of the form
  Conversely, (a, h, irrelevant) denotes the case where the previous state was (a − 1, h, ·), rendering match now ineffective, as all honest nodes received already the h’th block. 
 The third label, active, represents the case where the honest network is already split, due to a previous match action; this information affects the transition to the next state, as described below. We will refer to states as (a, h) or (a, h,·), in contexts where the fork label plays no effective role. 
 3. Transtion and reward:
+
+#### Objective function
+
+1. The initial objective function is non-linear because the 
+2. We introduce the parameter 
+
+#### Covert to Finite MDP
 
 
 
