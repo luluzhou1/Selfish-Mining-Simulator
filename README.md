@@ -95,6 +95,8 @@ However, the effectiveness of these design remained self-claimed. So, it is nece
 |Subversion gain | This metric measures the profitability of double-spending attacks|
 |Censorship susceptibility | Maximum fraction of income loss the attacker incur on compliant miners in a censorship retaliation attack.|
 
+ Whenever it is infeasible to model the exact system, we choose to favor the compliant miners and limit the attacker’s ability, ensuring the attacker’s utility is achievable in reality to better demonstrate the protocols’ weaknesses.
+
 ### 4.3 Better-chain-quality Protocols
 
 | Tie-breaking Methods | Modeling|
