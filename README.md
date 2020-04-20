@@ -81,10 +81,9 @@ The objective function is constructed as: <img src="./pictures/obj_fun.png" widt
 *Reference: Lay Down the Common Metrics: Evaluating Proof-of-Work Consensus Protocols’ Security* [link](https://www.esat.kuleuven.be/cosic/publications/article-3005.pdf)
 
 ### 4.1 Whether a Secure PoW protocol is possible?
-Bitcoin's Nakamoto Consensus (NC) Protocol fails to achieve perfect chain quality.    
-Ethereum, Bitcoin-NG, DECOR+, Byzcoin and Publish or Perish, aim to solve the problem by raising the chain quality. (Better-chain-quality protocol)   
-Other designs, represented by Fruitchains, DECOR+ and Subchains, claim to successfully defend against the attacks in the absence of perfect chain quality. (Attack-resistant protocol) 
-
+1. Bitcoin's Nakamoto Consensus (NC) Protocol fails to achieve perfect chain quality.    
+2. Ethereum, Bitcoin-NG, DECOR+, Byzcoin and Publish or Perish, aim to solve the problem by raising the chain quality. (Better-chain-quality protocol)   
+3. Other designs, represented by Fruitchains, DECOR+ and Subchains, claim to successfully defend against the attacks in the absence of perfect chain quality. (Attack-resistant protocol)       
 However, the effectiveness of these design remained self-claimed. So, it is necessary to introduce a **multi-metric quantitative evaluation framework** to evaluate the security of them.
 
 ### 4.2 Multi-metric Quantitative Evaluation Framework
