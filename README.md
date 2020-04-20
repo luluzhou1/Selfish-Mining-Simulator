@@ -84,6 +84,7 @@ The objective function is constructed as: <img src="./pictures/obj_fun.png" widt
 1. Bitcoin's Nakamoto Consensus (NC) Protocol fails to achieve perfect chain quality.    
 2. Ethereum, Bitcoin-NG, DECOR+, Byzcoin and Publish or Perish, aim to solve the problem by raising the chain quality. (Better-chain-quality protocol)   
 3. Other designs, represented by Fruitchains, DECOR+ and Subchains, claim to successfully defend against the attacks in the absence of perfect chain quality. (Attack-resistant protocol)       
+
 However, the effectiveness of these design remained self-claimed. So, it is necessary to introduce a **multi-metric quantitative evaluation framework** to evaluate the security of them.
 
 ### 4.2 Multi-metric Quantitative Evaluation Framework
@@ -123,8 +124,8 @@ Subchains|||
   - Relying on “layer 2” protocols to protect against specific attacks.
 
 ### 4.6 Security Trade-offs in Attack Resistance
-- Security vs. Performance
-- “Rewarding the Bad” vs. “Punishing the Good”: 
+1. Security vs. Performance
+2. “Rewarding the Bad” vs. “Punishing the Good”: 
   - Reward-all protocols improve censorship resistance by increasing the difficulty to invalidate other miners’ rewards, at the price of removing the risk to fork the blockchain, thus encouraging double-spending attacks. 
   - Punishment protocols improve selfish mining and double-spending resistance by discouraging malicious behaviors, at the price of lowering the attacker’s diffi- culty to damage the compliant miners’ income, thus facilitating censorship.
   - Reward-lucky protocols, contrary to their design- ers’ intention, allow the attacker to invalidate the compliant miners’ “lucky” blocks with the attacker’s “unlucky” units in a risk-free manner, leaving them more vulnerable to all three attacks.
