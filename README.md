@@ -113,6 +113,16 @@ Fruitchains|||
 Reward-Splitting Protocol|||
 Subchains|||
 
+### Discussion
+1. Complexity is the enemy of security: As demonstrated by our results, despite the simplicity of NC, to date there is no protocol that surpasses NC in all our security metrics when the attacker has no network propagation advantage.
+2. Introducing and realizing practical assumptions to raise the chain quality: Such assumptions may include:
+  - Awareness of network conditions: identify block withholding behaviors with a higher level of confidence.
+  - A loosely synchronized clock: With a loosely synchronized clock, participants can use the gap between a block’s receiving time and its timestamp as an indicator of malicious behaviors.
+  - Responsible parties with large deposits or public real-world identities: demanding a large deposit before performing certain actions to increase the amount of penalty, or limiting these actions to parties with publicly verified real-world identities in order to put their reputation at stake.
+3. Outsourcing liability to raise attack resistance
+  - Introducing additional punishment rules.
+  - Relying on “layer 2” protocols to protect against specific attacks.
+
 ### SECURITY TRADE-OFFS IN ATTACK RESISTANCE
 - Security vs. Performance
 - “Rewarding the Bad” vs. “Punishing the Good”: 
