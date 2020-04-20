@@ -5,12 +5,14 @@
 - Incentive compatible: the incentives that motivate the actions of individual participants are consistent with following the rules established by the group. If a blockchain system is incentive compatible, the participants could not make profit by deviating from the protocol.
 - Block race: 
 - Profit threshold: minimal 𝛼 for which employing dishonest mining strategies becomes profitable.
+- Chain quality: High chain quality means malicious miners could not alter the public ledger.
 - Block propagation:
 - Block withholding: 
+- Consensus Block: The last block recognized by all miners.
 
 ## 2. Markov Chain Model
 
-*Reference: Majority is not Enough* ![link](https://www.cs.cornell.edu/~ie53/publications/btcProcFC.pdf)
+*Reference: Majority is not Enough* [link](https://www.cs.cornell.edu/~ie53/publications/btcProcFC.pdf)
 
 In this paper, the authors came up with the "selfish mining" attack, which showed that the bitcoin system is not incentive compatible.
 
@@ -30,7 +32,7 @@ In this figure, the black line is the return if mining honestly, while the red l
 
 ## 3. Markov Decision Process Model
 
-*Reference: Optimal Selfish Mining Strategies in Bitcoin* ![link](https://arxiv.org/pdf/1507.06183.pdf)
+*Reference: Optimal Selfish Mining Strategies in Bitcoin* [link](https://arxiv.org/pdf/1507.06183.pdf)
 
 ### 3.1 A simple Upper Bound for Profit of Selfish Mining 
 
@@ -74,6 +76,39 @@ The objective function is constructed as: <img src="./pictures/obj_fun.png" widt
 
 #### Covert to Finite MDP
 
+## 4. Evaluating the Proof of Work Consensus Protocol's Security
 
+*Reference: Lay Down the Common Metrics: Evaluating Proof-of-Work Consensus Protocols’ Security* [link](https://www.esat.kuleuven.be/cosic/publications/article-3005.pdf)
 
+### 4.1 Whether a Secure PoW protocol is possible?
+Bitcoin's Nakamoto Consensus (NC) Protocol fails to achieve perfect chain quality.    
+Ethereum, Bitcoin-NG, DECOR+, Byzcoin and Publish or Perish, aim to solve the problem by raising the chain quality. (Better-chain-quality protocol)   
+Other designs, represented by Fruitchains, DECOR+ and Subchains, claim to successfully defend against the attacks in the absence of perfect chain quality. (Attack-resistant protocol) 
+
+However, the effectiveness of these design remained self-claimed. So, it is necessary to introduce a **multi-metric quantitative evaluation framework** to evaluate the security of them.
+
+### 4.2 Multi-metric Quantitative Evaluation Framework
+|Metic|Explanation|
+|----|----|
+|Chain Quality| This metric measures the difficulty to substitute the honest main chain blocks. |
+|Incentive compatibility | This metric measures a proto- col’s selfish mining resistance.|
+|Subversion gain | This metric measures the profitability of double-spending attacks|
+|Censorship susceptibility | Maximum fraction of income loss the attacker incur on compliant miners in a censorship retaliation attack.|
+
+### Better-chain-quality Protocols
+
+| Tie-breaking Methods | Modeling|
+| ---- | ---- |
+|Uniform Tie-Breaking|MDP, split the hash value space into a small number of regions to reduce number of states|
+|Smallest Hash Tie-breaking|MDP |
+|Unpredictable Derministic Tie-breaking||
+|Publish or Perish||
+
+### SECURITY TRADE-OFFS IN ATTACK RESISTANCE
+- Security vs. Performance
+- “Rewarding the Bad” vs. “Punishing the Good”: 
+  - Reward-all protocols improve censorship resistance by increasing the difficulty to invalidate other miners’ rewards, at the price of removing the risk to fork the blockchain, thus encouraging double-spending attacks. 
+  - Punishment protocols improve selfish mining and double-spending resistance by discouraging malicious behaviors, at the price of lowering the attacker’s diffi- culty to damage the compliant miners’ income, thus facilitating censorship.
+  - Reward-lucky protocols, contrary to their design- ers’ intention, allow the attacker to invalidate the compliant miners’ “lucky” blocks with the attacker’s “unlucky” units in a risk-free manner, leaving them more vulnerable to all three attacks.
+  - We conclude that none of the three approaches can improve the security of PoW against three major attacks; they only offer different trade-offs in resistance. 
 
