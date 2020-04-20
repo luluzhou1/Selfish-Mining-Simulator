@@ -91,11 +91,11 @@ However, the effectiveness of these design remained self-claimed. So, it is nece
 |Metic|Explanation|
 |----|----|
 |Chain Quality| This metric measures the difficulty to substitute the honest main chain blocks. |
-|Incentive compatibility | This metric measures a proto- col’s selfish mining resistance.|
+|Incentive compatibility | This metric measures a protocol’s selfish mining resistance.|
 |Subversion gain | This metric measures the profitability of double-spending attacks|
 |Censorship susceptibility | Maximum fraction of income loss the attacker incur on compliant miners in a censorship retaliation attack.|
 
-### Better-chain-quality Protocols
+### 4.3 Better-chain-quality Protocols
 
 | Tie-breaking Methods | Modeling|
 | ---- | ---- |
@@ -104,6 +104,15 @@ However, the effectiveness of these design remained self-claimed. So, it is nece
 |Unpredictable Derministic Tie-breaking||
 |Publish or Perish||
 
+We attribute NC’s poor chain quality to the protocol’s in- capability in distinguishing the honest chain from the attacker chain, due to information asymmetry. Unfortunately, we believe it is difficult to solve this infor- mation asymmetry within PoW protocols’ security assump- tions.
+
+### Typical Attack-resistance Protocol
+|Protocol|Subversion Gain Analysis|Censorship Susceptibility Analysis|
+|----|----|----|
+Fruitchains|||
+Reward-Splitting Protocol|||
+Subchains|||
+
 ### SECURITY TRADE-OFFS IN ATTACK RESISTANCE
 - Security vs. Performance
 - “Rewarding the Bad” vs. “Punishing the Good”: 
@@ -111,4 +120,6 @@ However, the effectiveness of these design remained self-claimed. So, it is nece
   - Punishment protocols improve selfish mining and double-spending resistance by discouraging malicious behaviors, at the price of lowering the attacker’s diffi- culty to damage the compliant miners’ income, thus facilitating censorship.
   - Reward-lucky protocols, contrary to their design- ers’ intention, allow the attacker to invalidate the compliant miners’ “lucky” blocks with the attacker’s “unlucky” units in a risk-free manner, leaving them more vulnerable to all three attacks.
   - We conclude that none of the three approaches can improve the security of PoW against three major attacks; they only offer different trade-offs in resistance. 
+
+
 
