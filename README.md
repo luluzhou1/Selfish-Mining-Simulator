@@ -106,14 +106,14 @@ However, the effectiveness of these design remained self-claimed. So, it is nece
 
 We attribute NC’s poor chain quality to the protocol’s in- capability in distinguishing the honest chain from the attacker chain, due to information asymmetry. Unfortunately, we believe it is difficult to solve this infor- mation asymmetry within PoW protocols’ security assump- tions.
 
-### Typical Attack-resistance Protocol
+### 4.4 Typical Attack-resistance Protocol
 |Protocol|Subversion Gain Analysis|Censorship Susceptibility Analysis|
 |----|----|----|
 Fruitchains|||
 Reward-Splitting Protocol|||
 Subchains|||
 
-### Discussion
+### 4.5 Discussion
 1. Complexity is the enemy of security: As demonstrated by our results, despite the simplicity of NC, to date there is no protocol that surpasses NC in all our security metrics when the attacker has no network propagation advantage.
 2. Introducing and realizing practical assumptions to raise the chain quality: Such assumptions may include:
   - Awareness of network conditions: identify block withholding behaviors with a higher level of confidence.
@@ -123,7 +123,7 @@ Subchains|||
   - Introducing additional punishment rules.
   - Relying on “layer 2” protocols to protect against specific attacks.
 
-### SECURITY TRADE-OFFS IN ATTACK RESISTANCE
+### 4.6 Security Trade-offs in Attack Resistance
 - Security vs. Performance
 - “Rewarding the Bad” vs. “Punishing the Good”: 
   - Reward-all protocols improve censorship resistance by increasing the difficulty to invalidate other miners’ rewards, at the price of removing the risk to fork the blockchain, thus encouraging double-spending attacks. 
